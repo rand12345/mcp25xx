@@ -20,7 +20,7 @@ where
     SPI: Transfer<u8>,
     SPI: Write<u8, Error = <SPI as Transfer<u8>>::Error>,
     <SPI as Transfer<u8>>::Error: Debug,
-    CS: OutputPin<Error = Infallible>,
+    CS: OutputPin,
 {
     type Error = <SPI as Transfer<u8>>::Error;
 
